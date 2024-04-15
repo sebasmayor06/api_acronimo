@@ -8,7 +8,7 @@ const {
 const {Sequelize} = require('sequelize');
 
 
-const database = new Sequelize(DATABASE_URL,{logging:false});
+const database = new Sequelize(`${DATABASE_URL}`,{logging:false});
 
 acronimosModel(database)
 
