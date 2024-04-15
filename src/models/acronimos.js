@@ -2,7 +2,7 @@ const {DataTypes} =require("sequelize");
 
 
 module.exports = (database) =>{
-    database.define('busquedas', {
+    database.define('busquedas2', {
 
         id:{
             type: DataTypes.INTEGER, 
