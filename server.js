@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3001;
 const server = express()
 
 const RouterAcronico = require('./src/routes')
-server.use(cors({ origin: 'http://localhost:3000' }));
+server.use(cors({ origin: 'https://clientacronimo-production.up.railway.app' }));
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(morgan('dev'));
@@ -23,4 +23,5 @@ server.listen(PORT, () => {
   console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
 })
 )
+
 
