@@ -1,17 +1,14 @@
 require('dotenv').config();
 const acronimosModel = require ('./models/acronimos')
 const {
-    DB_USER,
-    DB_PASSWORD,
-    DB_HOST,
-    DB_NAME
+    DATABASE_URL
 } = process.env
 
 
 const {Sequelize} = require('sequelize');
 
 
-const database = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,{logging:false});
+const database = new Sequelize(DATABASE_URL,{logging:false});
 
 acronimosModel(database)
 
