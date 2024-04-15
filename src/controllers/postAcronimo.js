@@ -1,9 +1,9 @@
-const {busquedas2} =require ('../db')
+const {busquedas} =require ('../db')
 
 const postAcronimo = async (req, res) => {
 try {
     const {name_acronimo} = req.body
-    const [newAcronimo, created] = await busquedas2.findOrCreate({
+    const [newAcronimo, created] = await busquedas.findOrCreate({
         where:{name_acronimo:name_acronimo},
         defaults: {
             name_acronimo:name_acronimo
